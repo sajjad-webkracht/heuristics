@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (max-width: 768px) {
+.custom-cursor {
+    display: none;
+}
+.custom-cursor-pointer {
+    display: none;
+}
+}
+/* Hide the default cursor */
+@media (min-width: 768px) {
+    body {
+        cursor: none;
+    }
+
+    /* Custom cursor styles */
+    .custom-cursor {
+        position: fixed;
+        width: 32px; /* Initial size */
+        height: 32px; /* Initial size */
+        pointer-events: none;
+        z-index: 9999;
+        transition: transform 0.3s ease;
+        transform: translate(-50%, -50%);
+    }
+
+    .custom-cursor-pointer {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
