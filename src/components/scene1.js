@@ -25,7 +25,7 @@ const S1 = () => {
 
 
     return (
-        <div>
+        <div className='h-svh overflow-y-hidden'>
             <Opening />
             <div className='flex flex-col lg:flex-row absolute z-30 top-0 left-0 h-svh overflow-y-scroll'>
                 <div className='w-full lg:w-2/3 px-5 py-5 lg:px-24 lg:py-12 2xl:pt-20'>
