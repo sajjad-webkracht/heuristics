@@ -58,7 +58,7 @@ const Loading = () => {
 
     
     return (
-        <div className="flex items-center justify-center w-full h-screen bg-zinc-900 text-white">
+        <div className="flex items-center justify-center w-full h-svh bg-zinc-900 text-white">
                     <div id='f1' className="mix-blend-color-dodge opacity-40 w-full h-svh absolute top-0 left-0 pointer-events-none z-50">
             <svg width="100%" height="100%">
                 <filter id="noiseFilter">
