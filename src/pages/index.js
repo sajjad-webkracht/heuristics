@@ -14,7 +14,6 @@ import S10 from '../components/scene10.js';
 import Grain from '../components/grain';
 import Background from '../components/background';
 import Loading from '../components/loading';
-import Phone from '../components/phone';
 import Footer from '../components/footer'
 import Slider from '../components/slider'
 import Seo from '../components/seo'
@@ -26,23 +25,9 @@ const scenes = [S0, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10];
 
 const IndexPage = () => {
     const [isLoading, setIsLoading] = useState(true);
-    const [isMobile, setIsMobile] = useState(false);
     const [currentScene, setCurrentScene] = useState(0);
     const [showSlider, setShowSlider] = useState(false); // State to control the visibility of the Slider
 
-    useEffect(() => {
-        // Set isMobile state after component has mounted
-        setIsMobile(window.innerWidth < 768);
-
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 768);
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        // Clean up the event listener on component unmount
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
 
     
         // Set the initial scene based on the URL hash
@@ -69,16 +54,6 @@ const IndexPage = () => {
         return () => clearTimeout(timeout);
     }, []);
 
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 768);
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        // Clean up the event listener on component unmount
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
 
     useEffect(() => {
         const handleKeyDown = (event) => {
@@ -130,8 +105,6 @@ const IndexPage = () => {
             <CustomCursor />
             {isLoading ? (
                 <Loading />
-            ) : isMobile ? (
-                <Phone />
             ) : (
                 <>
                     {/*<CurrentSceneComponent className="w-full h-screen"  handleNext={handleNext} />*/}
