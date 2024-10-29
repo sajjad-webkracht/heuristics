@@ -27,7 +27,7 @@ const S1 = () => {
     return (
         <div className='h-svh overflow-y-hidden'>
             <Opening />
-            <div className='flex flex-col lg:flex-row lg:absolute z-30 lg:top-0 lg:left-0 h-svh overflow-y-scroll'>
+            <div className='flex flex-col lg:flex-row absolute z-30 top-0 left-0 h-svh overflow-y-scroll'>
                 <div className='w-full lg:w-2/3 px-5 py-5 lg:px-24 lg:py-12 2xl:pt-20'>
                     <h2 className='bg-ann-500 flex px-5 py-2 2xl:p-8 text-2xl lg:text-4xl font-bold mb-5 relative 2xl:text-5xl'>01 - Visibility of System Status <animated.div className='h-full bg-ann-500 absolute top-0 left-0' style={ani1} /></h2>
                     <h3 className='text-zinc-50 text-xl 2xl:text-3xl mb-2 relative'>
