@@ -83,11 +83,27 @@ function Tube() {
 }
 
 const Nielsen = () => {
+    // Function to get the value based on screen width
+const getValueBasedOnScreenWidth = () => {
+    return window.innerWidth < 768 ? -4 : 0;
+};
+
+// Set initial value
+let cameraValue = getValueBasedOnScreenWidth();
+
+// Update value on window resize
+window.addEventListener('resize', () => {
+    cameraValue = getValueBasedOnScreenWidth();
+});
+
+
     return (
-        <div className='w-full h-svh absolute top-0 left-0 z-10'>
+        <div className='w-full h-2/3 md:h-svh absolute bottom-0 md:bottom-auto md:top-0 left-0 z-10'>
+            <div className='md:hidden absolute -top-16 left-0 w-full h-16 bg-gradient-to-t from-zinc-900 to-[rgba(24,24,27,0)] z-[11]' />
+            <div className='md:hidden absolute top-0 left-0 w-full h-28 bg-gradient-to-b from-zinc-900 to-[rgba(24,24,27,0)] z-[11]' />
             <Canvas 
             style={{ width: '100%', height: '100%' }}
-            camera={{ position: [0, 0.2, 6], fov: 75 }}
+            camera={{ position: [cameraValue, 0.2, 6], fov: 75 }}
             >
                 <ambientLight intensity={0.5} />
                 <directionalLight position={[5, 10, 5]} intensity={2} />
