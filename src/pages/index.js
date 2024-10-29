@@ -101,7 +101,7 @@ const IndexPage = () => {
 
 
     return (
-        <main className="bg-zinc-900 w-full overflow-y-hidden h-svh font-red-hat">
+        <main className="w-full overflow-y-hidden h-svh font-red-hat">
             <CustomCursor />
             {isLoading ? (
                 <Loading />

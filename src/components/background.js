@@ -74,7 +74,7 @@ const Background = () => {
       })
 
     return (
-        <div className="absolute top-0 left-0 z-0 w-full h-svh pointer-events-none overflow-hidden">
+        <div className="absolute top-0 left-0 -z-10 bg-zinc-900 w-full h-svh pointer-events-none overflow-hidden">
             <animated.img src={Heuristics} alt='Heuristics' className='h-1/5' style={{...text1}} />
             <animated.img src={Heuristics} alt='Heuristics' className='h-1/5' style={{...text2}} />
             <animated.img src={Heuristics} alt='Heuristics' className='h-1/5' style={{...text3}} />
